@@ -9,7 +9,7 @@ const Testimonial = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await axios.get("https://bookstore12-5.onrender.com/user/review");
+        const response = await axios.get("https://bookstoreapp-6v8p.onrender.com/user/review");
         setTestimonials(response.data);
         console.log("Testimonials fetched successfully:", response.data);
       } catch (error) {
