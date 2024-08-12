@@ -1,6 +1,6 @@
 import User from "../model/user.model.mjs";
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
+
 
 export const Signup=async(req,res)=>{
     const {name,email,password}=req.body;
@@ -12,12 +12,11 @@ export const Signup=async(req,res)=>{
             console.log(user);
             return res.status(404).json({message:"user already exist"});
         }
-        const hashpassword=await bcrypt.hash(password,10);
-        
+       
         const newuser=new User({
            name:name,
            email:email,
-           password:hashpassword
+           password:password
         })
         
        await newuser.save();
@@ -40,8 +39,8 @@ export const Login=async(req,res)=>{
             return res.status(404).json({message:"user not found"});
         }
         
-        const ismatch=await bcrypt.compare(password,user.password);
-        if(!ismatch)
+   
+        if(password!==user.password)
         {
             return res.status(404).json({message:"inavalid Password"});
         }
