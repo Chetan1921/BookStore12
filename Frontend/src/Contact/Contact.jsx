@@ -17,7 +17,7 @@ const Contact = () => {
       message,
     };
     try {
-      await axios.post("https://bookstoreapp-6v8p.onrender.com/user/Contact", contactInfo);
+      await axios.post("http://localhost:5001/user/Contact", contactInfo);
       toast.success("Thanks for contacting us!");
       setTimeout(() => {
         toast.success("We will contact you soon!");
