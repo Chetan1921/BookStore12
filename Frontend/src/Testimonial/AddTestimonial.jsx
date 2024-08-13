@@ -25,7 +25,7 @@ const AddReview = () => { // Changed the component name to match the functionali
     try {
       console.log(formData);
       const response = await axios.post(
-        "https://bookstore1234-c9ga.onrender.com/user/review",
+        "https://bookstoreapp123.onrender.com/user/review",
         formData
       );
       toast.success("Review added successfully");
