@@ -25,7 +25,7 @@ function Signup() {
     };
     try {
       const response = await axios.post(
-        "https://bookstoreapp-6v8p.onrender.com/user/signup",
+        "http://localhost:5001/user/signup",
         userinfo
       );
 
