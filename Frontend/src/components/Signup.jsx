@@ -25,7 +25,7 @@ function Signup() {
     };
     try {
       const response = await axios.post(
-        "https://bookstore1234-c9ga.onrender.com/user/signup",
+        "https://bookstoreapp123.onrender.com/user/signup",
         userinfo
       );
 
