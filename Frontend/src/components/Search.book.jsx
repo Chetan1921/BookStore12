@@ -12,7 +12,7 @@ const BookSearch = () => {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `https://bookstoreapp-6v8p.onrender.com/api/book/search?query=${query}`
+        `http://localhost:5001/api/book/search?query=${query}`
       );
       console.log(response.data); // Check the response
       setResults(response.data);
